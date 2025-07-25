@@ -46,42 +46,12 @@ Sistema Spring Boot para gerenciamento de:
    git clone https://github.com/HeitorPD25/TesteBackEnd.git
    cd TesteBackEnd
 
-🏗 Estrutura do Projeto
+### ✉️ Contato
 
-src/
-├── main/
-│   ├── java/
-│   │   └── com.teste.back.end.demo/
-│   │       ├── controllers/
-│   │       ├── model/
-│   │       ├── repository/
-│   │       ├── service/
-│   │       └── exceptions/
-└── test/
-
-📊 Diagrama de Entidades
-
-classDiagram
-    class Pessoas {
-        +Long id
-        +String nome
-        +String departamento
-        +List<Tarefas> listaDeTarefas
-    }
-    class Tarefas {
-        +Long id
-        +String titulo
-        +String descricao
-        +LocalDateTime prazo
-        +String departamento
-        +Pessoas pessoa
-    }
-    Pessoas "1" -- "*" Tarefas
-
-✉️ Contato
-
-Email: heitorpdte@gmail.com
-GitHub: @HeitorPD25
+## Email: 
+heitorpdte@gmail.com
+## GitHub: 
+@HeitorPD25
 
 
 
