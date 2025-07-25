@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.teste.back.end.demo.model.Tarefas;
@@ -17,9 +16,6 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class TarefasService {
-
-    @Autowired
-    private TarefasRepository tarefasRepository;
 
     private final TarefasRepository tarefaRepository;
 
@@ -41,6 +37,6 @@ public class TarefasService {
 
     public List<Tarefas> listarTarefasPendentes() {
         Pageable topThreeByPrazoAsc = PageRequest.of(0, 3);
-        return tarefasRepository.findByPessoaIsNullOrderByPrazoAsc(topThreeByPrazoAsc);
+        return tarefaRepository.findByPessoaIsNullOrderByPrazoAsc(topThreeByPrazoAsc);
     }
 }

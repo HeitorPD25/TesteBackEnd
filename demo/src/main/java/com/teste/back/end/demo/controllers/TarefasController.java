@@ -2,7 +2,6 @@ package com.teste.back.end.demo.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,9 +23,6 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/tarefas")
 @RequiredArgsConstructor
 public class TarefasController {
- 
-    @Autowired
-    private TarefasService tarefasService;
 
     private final TarefasService tarefaService;
 
@@ -79,7 +75,7 @@ public class TarefasController {
 
     @GetMapping("/pendentes")
     public ResponseEntity<List<Tarefas>> listarTarefasPendentes() {
-        List<Tarefas> tarefasPendentes = tarefasService.listarTarefasPendentes();
+        List<Tarefas> tarefasPendentes = tarefaService.listarTarefasPendentes();
         return ResponseEntity.ok(tarefasPendentes);
     }
 
